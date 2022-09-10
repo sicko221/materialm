@@ -9,12 +9,6 @@ local run = game:GetService("RunService")
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 
-for i,v in next,game.CoreGui:GetChildren() do
-	if v.Name == "Eternal" then
-		v:Destroy()
-	end
-end
-
 -- additional
 local utility = {}
 
