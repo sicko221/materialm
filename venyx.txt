@@ -23,6 +23,11 @@ DarkContrast = Color3.fromRGB(14, 14, 14),
 TextColor = Color3.fromRGB(97, 65, 255)
 }
 do
+for i,v in next,game.CoreGui:GetChildren() do
+	if v.Name == "Eternal" then
+		v:Destroy()
+	end
+end
 	function utility:Create(instance, properties, children)
 		local object = Instance.new(instance)
 		
@@ -2168,9 +2173,3 @@ do
 end
 
 return library
-
-for i,v in next,game.CoreGui:GetChildren() do
-	if v.Name == "Eternal" then
-		v:Destroy()
-	end
-end
