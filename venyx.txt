@@ -9,6 +9,12 @@ local run = game:GetService("RunService")
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 
+for i,v in next,game.CoreGui:GetChildren() do
+	if v.Name == "Eternal" then
+		v:Destroy()
+	end
+end
+
 -- additional
 local utility = {}
 
@@ -23,11 +29,6 @@ DarkContrast = Color3.fromRGB(14, 14, 14),
 TextColor = Color3.fromRGB(97, 65, 255)
 }
 do
-for i,v in next,game.CoreGui:GetChildren() do
-	if v.Name == "Eternal" then
-		v:Destroy()
-	end
-end
 	function utility:Create(instance, properties, children)
 		local object = Instance.new(instance)
 		
