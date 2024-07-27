@@ -155,8 +155,8 @@ function notifications:notify(options)
 
 	local close
 
-	local acceptButton; if options.Accept then
-		options.Accept.Callback = options.Accept.Callback or function() end
+	local acceptButton; if options.Callback then
+		options.Callback = options.Callback
 		acceptButton = callbacksContainer:object("TextButton", {
 			Size = UDim2.new(0, 100, 0.5, 0),
 			Position = UDim2.fromScale(0.5, 0.5),
@@ -180,8 +180,8 @@ function notifications:notify(options)
 		end)
 	end
 
-	local dismissButton; if options.Dismiss then
-		options.Dismiss.Callback = options.Dismiss.Callback or function() end
+	local dismissButton; --if options.Callback then
+		--options.Dismiss.Callback =  function() end
 		dismissButton = callbacksContainer:object("TextButton", {
 			Size = UDim2.new(0, 100, 0.5, 0),
 			Position = UDim2.fromScale(0.5, 0.5),
@@ -200,10 +200,10 @@ function notifications:notify(options)
 		end
 
 		dismissButton.MouseButton1Click:connect(function()
-			options.Dismiss.Callback()
+			--options.Dismiss.Callback()
 			close()
 		end)
-	end
+	--end
 
 	local closing = false
 
