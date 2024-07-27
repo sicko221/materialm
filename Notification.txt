@@ -165,7 +165,7 @@ function notifications:notify(options)
 			TextColor3 = theme.Text,
 			Font = Enum.Font.SourceSans,
 			TextSize = 18,
-			Text = options.Accept.Text or "Yes",
+			Text = "Yes",
 			BackgroundTransparency = 1, --
 			TextTransparency = 1 --
 		}):round()
@@ -200,7 +200,6 @@ function notifications:notify(options)
 		end
 
 		dismissButton.MouseButton1Click:connect(function()
-			--options.Dismiss.Callback()
 			close()
 		end)
 	--end
