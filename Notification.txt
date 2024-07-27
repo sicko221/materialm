@@ -175,7 +175,7 @@ function notifications:notify(options)
 		end
 
 		acceptButton.MouseButton1Click:connect(function()
-			options.Callback
+			--options.Callback
 			close()
 		end)
 	end
